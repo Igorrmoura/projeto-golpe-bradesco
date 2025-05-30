@@ -1,6 +1,8 @@
 package application;
 
 import java.util.Scanner;
+
+import entities.Cartao;
 import entities.Usuario;
 
 public class Sistema {
@@ -9,28 +11,29 @@ public class Sistema {
 		Scanner sc = new Scanner(System.in);
 		
 		
-		Usuario user = new Usuario("lucas", 123, 500);
+		Usuario user = new Usuario("lucas", 123);
+		
+		Cartao cart = new Cartao("lucas", 123, 200, 500, 100);
 		
 		System.out.print("defina o limite de compra para receber notifição: ");
 		
-		int limite = sc.nextInt();
+		 
 		
-		System.out.println("seu limite de compra sem confirmação é: " + limite);
+		System.out.println("seu limite de compra sem confirmação é: " + cart.getLimite());
 		System.out.println();
 		
-		int compra = 200;
-		double result = 0;
 		
-		if (compra >= limite) {
+		
+		if ( cart.getCompra() >= cart.getLimite()) {
 			System.out.println("compra negada limite atingido!");
 		}
 		else {
 			System.out.println("compra aceita");
-			 result = user.getSaldo() - compra;
+			 cart.result();
 			
 		}
 		
-		System.out.print("saldo da conta: " + result);
+		System.out.print("saldo da conta: " + cart.result() );
 		
 	}
 

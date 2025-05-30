@@ -4,13 +4,13 @@ public class Usuario {
 	
 	private String name;
 	private double CPF;
-	private double saldo = 500;
+	
 	
 
-	public Usuario(String name, double cPF, double saldo) {
+	public Usuario(String name, double cPF) {
 		this.name = name;
 		CPF = cPF;
-		this.saldo = saldo;
+		
 	}
 
 
@@ -32,17 +32,6 @@ public class Usuario {
 	public void setCPF(int cPF) {
 		CPF = cPF;
 	}
-
-
-	public double getSaldo() {
-		return saldo;
-	}
-
-
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
-	}
-	
 
 
 }
