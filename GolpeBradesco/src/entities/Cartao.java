@@ -3,10 +3,7 @@ package entities;
 public class Cartao extends Usuario {
 	
 	private int limite;
-	private double saldo;
 	private double compra;
-
-
 
 	
 	public int getLimite() {
@@ -17,16 +14,7 @@ public class Cartao extends Usuario {
 	public void setLimite(int limite) {
 		this.limite = limite;
 	}
-
-
-	public double getSaldo() {
-		return saldo;
-	}
-
-
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
-	}
+	
 
 
 	public double getCompra() {
@@ -34,15 +22,15 @@ public class Cartao extends Usuario {
 	}
 
 
-
 	public void setCompra(double compra) {
 		this.compra = compra;
 	}
-
-
-
-	public double result() {
+	
+	
+	public double saldoConta () {
 		return saldo - compra;
 	}
+
+
 	
 }

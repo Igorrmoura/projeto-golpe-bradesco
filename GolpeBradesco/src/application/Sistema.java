@@ -18,10 +18,19 @@ public class Sistema {
 		System.out.println();
 		System.out.print("insira sua senha: ");
 		user.setSenha(sc.nextInt());
-				
+		
+		if (user.getLogin().equals("joao@gmail") && user.getSenha() == 123) {
+			System.out.println("acesso permitido");
+			
+		} else {
+			System.out.println("acesso negado");
+		}
+			System.out.print("valor da compra: ");
+		cart.setCompra(sc.nextDouble());
 		
 		System.out.println("seu login: " + user.getLogin() + ", " + "senha: " + user.getSenha());
 		
+		System.out.println("result = " + cart.saldoConta() );
 	}
 
 }
