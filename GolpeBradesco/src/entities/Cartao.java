@@ -7,12 +7,6 @@ public class Cartao extends Usuario {
 	private double compra;
 
 
-	public Cartao(String name, double cPF, int limite, double saldo, double compra) {
-		super(name, cPF);
-		this.limite = limite;
-		this.saldo = saldo;
-		this.compra = compra;
-	}
 
 	
 	public int getLimite() {

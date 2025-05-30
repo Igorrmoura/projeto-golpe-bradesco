@@ -10,30 +10,17 @@ public class Sistema {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
+		Usuario user = new Usuario();
+		Cartao cart = new Cartao();
 		
-		Usuario user = new Usuario("lucas", 123);
-		
-		Cartao cart = new Cartao("lucas", 123, 200, 500, 100);
-		
-		System.out.print("defina o limite de compra para receber notifição: ");
-		
-		 
-		
-		System.out.println("seu limite de compra sem confirmação é: " + cart.getLimite());
+		System.out.print("insira seu login: ");
+		user.setLogin(sc.next());
 		System.out.println();
+		System.out.print("insira sua senha: ");
+		user.setSenha(sc.nextInt());
+				
 		
-		
-		
-		if ( cart.getCompra() >= cart.getLimite()) {
-			System.out.println("compra negada limite atingido!");
-		}
-		else {
-			System.out.println("compra aceita");
-			 cart.result();
-			
-		}
-		
-		System.out.print("saldo da conta: " + cart.result() );
+		System.out.println("seu login: " + user.getLogin() + ", " + "senha: " + user.getSenha());
 		
 	}
 

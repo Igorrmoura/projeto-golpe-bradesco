@@ -2,36 +2,42 @@ package entities;
 
 public class Usuario {
 	
-	private String name;
-	private double CPF;
+	private String login;
+	private int senha;
 	
 	
+	public Usuario(String login, double senha) {
+	
+	}
 
-	public Usuario(String name, double cPF) {
-		this.name = name;
-		CPF = cPF;
+
+	public Usuario() {
 		
 	}
 
 
-	public String getName() {
-		return name;
+	public String getLogin() {
+		return login;
 	}
 
 
-	public void setName(String name) {
-		this.name = name;
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
 
-	public double getCPF() {
-		return CPF;
+	public int getSenha() {
+		return senha;
 	}
 
 
-	public void setCPF(int cPF) {
-		CPF = cPF;
+	public void setSenha(int senha) {
+		this.senha = senha;
 	}
 
 
+		
 }
+
+
+
